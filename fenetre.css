@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(../Polices\ Personnalisées/Poppins-light.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+}
+.ouverture a, #modale a {
+    text-decoration: none;
+}
+#modale a {
+    color: white;
+    font-size: 40px;
+    margin-left: 95%;
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+    padding: 0px 16px;
+    background-color: #118888;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    transition: all 1s ease-in-out;
+}
+#modale a:hover {
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.ouverture a {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 7px;
+    margin: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+.ouverture, .load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#modale {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 1.2s ease-in-out;
+}
+.modal_content {
+    background-color: seashell;
+    padding: 35px 30px;
+    margin: 0 100px;
+    border-radius: 10px;
+}
+#modale:target {
+    visibility: visible;
+    opacity: 1;
+}
+/* Load */
+.load {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #16ff88;
+    font-size: 55px;
+}
+.letter {
+    letter-spacing: 12px;
+    animation: flash 1.2s linear infinite;
+    font-weight: bold;
+}
+@keyframes flash {
+    0%{
+        color: #118888;
+    }
+    50%{
+        color: #ff0088;
+    }
+    100%{
+        color: #001188;
+    }
+}
+
+.letter:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.letter:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.letter:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.letter:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.letter:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.letter:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.letter:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.letter:nth-child(8) {
+    animation-delay: 0.8s;
+}
+.letter:nth-child(9) {
+    animation-delay: 0.9s;
+}
+.letter:nth-child(10) {
+    animation-delay: 1s;
+}
+.fondu {
+    visibility: hidden;
+    transition: visibility 2s ease-in-out;
+}
+
+@media screen and (max-width: 320px) {
+    .load {
+        font-size: 25px;
+    }
+}
